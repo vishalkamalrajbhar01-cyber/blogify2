@@ -16,9 +16,9 @@ function App() {
         <Route path='/' element={<HomePage />} />
         <Route path='/blog/:id' element={<BlogDetailesPage />} />
         <Route path='/admin/dashboard' element={<Dashboard />} />
-        <Route path='/admin/add-blog' element={<AddBlog />} />
-        <Route path='/admin/all-blogs' element={<AllBlog />} />
-        <Route path='/admin/edit-blog/:id' element={<EditBlog />} />
+        <Route path='/admin/addblog' element={<AddBlog />} />
+        <Route path='/admin/allblogs' element={<AllBlog />} />
+        <Route path='/admin/editblog/:id' element={<EditBlog />} />
 
 
         <Route path='*' element={<PageNotFound/>}/>
