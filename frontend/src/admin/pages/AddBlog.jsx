@@ -54,7 +54,7 @@ const AddBlog = () => {
             setCategory("");
             setTags("");
 
-            navigate('/admin/all-blogs')
+            navigate('/admin/allblogs')
 
         } catch (error) {
             toast.error("Something went wrong.")
