@@ -15,7 +15,7 @@ const port = 3000
 // ----- CONNECT DB FUNCTION -----
 const connectDB = async () => {
     try {
-        await mongoose.connect('mongodb://localhost:27017/blogify')
+        await mongoose.connect('mongodb+srv://vishalkamalrajbhar01_db_user:8mxxNHSqZFzUCNT7@cluster0.ugybqbp.mongodb.net/blogify')
         console.log("MongoDB connected. 🥳")
     } catch (error) {
         console.log("MongoDB not connected");
