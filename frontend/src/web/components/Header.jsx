@@ -1,7 +1,7 @@
 // src/components/Header.jsx
 
 import React from "react";
-import { FaPenNib } from "react-icons/fa";
+import { FaPenNib, FaUserShield } from "react-icons/fa";
 
 const Header = () => {
     return (
@@ -49,9 +49,13 @@ const Header = () => {
                 </nav>
 
                 {/* Button */}
-                <button className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-5 py-2 rounded-xl transition">
+                <a
+                    href="/admin/dashboard"
+                    className="flex items-center gap-2 bg-yellow-400 text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition duration-300 shadow-md"
+                >
+                    <FaUserShield />
                     Admin
-                </button>
+                </a>
             </div>
         </header>
     );
