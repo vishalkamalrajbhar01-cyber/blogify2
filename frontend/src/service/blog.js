@@ -2,13 +2,15 @@ import axios from 'axios';
 
 
 export const addBlog = async (data) => {
-    let response = await axios.post('https://blogify2-vbhx.onrender.com/addblog', data)
+    let response = await axios.post('http://localhost:3000/addblog', data)
+    // let response = await axios.post('https://blogify2-vbhx.onrender.com/addblog', data)
     return response;
 }
-
+console.log("error")
 
 export const getAllBlog = async () => {
-    let response = await axios.get('https://blogify2-vbhx.onrender.com/allblog')
+    let response = await axios.get('http://localhost:3000/allblog')
+    // let response = await axios.get('https://blogify2-vbhx.onrender.com/allblog')
     return response;
 }
 

@@ -1,6 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose';
 import cors from 'cors';
+import morgan from 'morgan'
 import BlogModel from './models/blog.model.js';
 const app = express()
 
@@ -8,6 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors())                                      // all access
 // app.use(cors({origin: "http://localhost:5173/"})) // limited access
+app.use(morgan('dev'))
 
 // ----- PORT -----
 const port = 3000
@@ -18,6 +20,7 @@ const connectDB = async () => {
         await mongoose.connect('mongodb+srv://vishalkamalrajbhar01_db_user:8mxxNHSqZFzUCNT7@cluster0.ugybqbp.mongodb.net/blogify')
         console.log("MongoDB connected. 🥳")
     } catch (error) {
+        console.log(error)
         console.log("MongoDB not connected");
     }
 }
@@ -43,6 +46,7 @@ app.post('/addblog', async (req, res) => {
 
         res.status(200).json({ success: true, message: "Blog Added Successfully", newBlog })
 
+    
 
     } catch (error) {
         console.log(error)
