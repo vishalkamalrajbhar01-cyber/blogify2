@@ -23,13 +23,13 @@ const Sidebar = () => {
         },
 
         {
-            key: "/admin/all-blogs",
+            key: "/admin/allblogs",
             icon: <FaBlog />,
             label: "All Blogs",
         },
 
         {
-            key: "/admin/add-blog",
+            key: "/admin/addblog",
             icon: <FaPlus />,
             label: "Add Blog",
         },
